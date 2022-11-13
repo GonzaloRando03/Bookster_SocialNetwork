@@ -1,0 +1,387 @@
+header{
+    border-bottom: 4px solid var(--secondary-color);
+    background-color: var(--main-bg-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: var(--secondary-color);
+    box-shadow: 5px 5px 12px grey;  
+}
+
+.headerContainer{
+    width: 95%;
+    display: flex;
+}
+
+.headerContainer div{
+    margin-top: 1.5pc;
+    width: 90%;
+    text-align: right;
+}
+
+.headerLink{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 20px;
+    margin-left: 2%;
+}
+
+.headerLink:hover{
+    color: var(--secondary-color-hover)
+}
+
+.iconBook{
+    font-size: 2pc;
+    margin-top: 1.3pc;
+    margin-right: 1pc;
+}
+
+.home{
+    width: 85%;
+    display: flex;
+    padding-bottom: 10%;
+}
+
+.userLat {
+    width: 15%;
+    position: fixed;
+}
+
+.userLat img{
+    width: 2.5pc;
+    height: 2.5pc;
+    border-radius: 50%;
+}
+
+.userLat div{
+    margin-top: 6pc;
+}
+
+.userLat h4{
+    margin: 2%;
+    font-weight: 350;
+    font-size: 110%;
+}
+
+.libro{
+    color: black;
+}
+
+.contentLat{
+    margin-left: 20%;
+    padding-left: 10%;
+    width: 80%;
+    border-left: 3px solid rgb(201, 201, 201);
+}
+
+.userBookImg{
+    margin-top: 1pc;
+    margin-right: 1%;
+    width: 2pc;
+    height: 2pc;
+    border-radius: 50%;
+}
+
+.bookImg{
+    width: 60%;
+    height: 80%;
+}
+
+.me{
+    padding-bottom: 10%;
+    width: 60%;
+}
+
+.profile{
+    display: flex;
+}
+
+.profilePhoto{
+    width: 6pc;
+    border-radius: 50%;
+    margin-right: 1pc;
+}
+
+.dragDiv{
+    text-align: center;
+    border: 3px dashed var(--secondary-color);
+    margin: 10%;
+    background-image: url('../img/upload.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.dragAndDrop{
+    background-color: aqua;
+    width: 100%;
+    height: 20pc;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dragImg img{
+    width: 7pc;
+}
+
+.pdf{
+    background-color: var(--secondary-color);
+    width: 30pc;
+    border-radius: 20px;
+    color: white;
+    padding-left: 1pc;
+}
+
+.pdf input{
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.login{
+    margin-top: 15%;
+    width: 50%;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    color: white;
+    padding-bottom: 1%;
+    box-shadow: 11px 17px 43px -18px rgba(0,0,0,0.75);
+}
+
+.login div{
+    margin-left: 3%;
+}
+
+.login input{
+    width: 40%;
+    padding: 1%;
+}
+
+.login button{
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.createUser{
+    margin-top: 2%;
+    width: 50%;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+    box-shadow: 11px 17px 43px -18px rgba(0,0,0,0.75);
+}
+
+.createUser div{
+    margin-left: 3%;
+    margin-bottom: 2%;
+}
+
+.createUser input{
+    width: 40%;
+    padding: 1%;
+}
+
+.createUser button{
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+button{
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 1%;
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: inset 0 0 5px 1px grey;
+}
+
+input{
+    padding: 0.3pc;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    margin-bottom: 1pc;
+}
+
+textarea{
+    padding: 0.3pc;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    margin-bottom: 1pc;
+    resize: none;
+}
+
+.linkLogin{
+    color:white;
+    margin-left: 2%;
+}
+
+.error{
+    background-color: red;
+    color: white;
+    padding: 2%;
+    border-radius: 20px;
+    position: fixed;
+    top:10%;
+    right: 0;
+}
+
+.unlog{
+    margin-left: 1pc;
+    padding: 1pc;
+    height: 3pc;
+    margin-top: 1.5pc;
+}
+
+.userBooks{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.userBookDiv{
+    width: 49%;
+    margin: 0.5%;
+}
+
+.userBookDiv img{
+    width: 100%;
+    
+}
+
+.mt100{
+    margin-top: 35.5%;
+}
+
+.bookOne{
+    width: 60%;
+    margin-top: 6pc;
+}
+
+.bookOneLink{
+    color: black;
+}
+
+.number{
+    margin-left: 5px;
+}
+
+.bookAuthorImg{
+    width: 3.5pc;
+    height: 3.5pc;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.bookOneImg{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1pc;
+}
+
+.oneBookIcon{
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.active{
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.comment{
+    width: 100%;
+    height: 10vh;
+}
+
+.comments{
+    margin-top: 5pc;
+    margin-bottom: 5pc;
+}
+
+.com{
+    border: 2px rgb(153, 153, 153) solid;
+    padding:10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.descarga{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.searchComponent{
+    margin-top: 6pc;
+    width: 60%;
+    margin-bottom: 41.5pc;
+}
+
+.searchComponent b{
+    font-size: 25px;
+}
+
+.searchComponent input{
+    margin-left: 30px;
+    width: 70%;
+}
+
+.lupa{
+    color: var(--secondary-color);
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.imageSearch{
+    width: 8pc;
+    height: 8pc;
+}
+
+.searchOne{
+    margin: 10px;
+    margin-left: 5pc;
+}
+
+.searchOne h2{
+    margin-top: 3pc;
+    margin-left: 20px;
+}
+
+.searchLink{
+    display: flex;
+    color: black;
+}
+
+.delButton{
+    background-color: rgb(201, 68, 68);
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.bookResume{
+    font-size: 20px;
+    margin-top: 2pc;
+    margin-bottom: 5pc;
+}
+
+#bookResume{
+    width: 44%;
+}
+
+footer{
+    text-align: center;
+    padding: 2%;
+    background-color: var(--secondary-color);
+}
