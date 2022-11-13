@@ -28,17 +28,17 @@ Proyecto desarrollado con React.js y Node.js, usando tecnologías como el manejo
       <a href='#libros'><li>Libros</li></a>
       <a href='#usuarios'><li>Usuarios</li></a>
     </ol>
-  <a href=''><li>Estructura de la aplicación</li></a>
+  <a href='#estructura'><li>Estructura de la aplicación</li></a>
     <ol type='A'>
-      <a href=''><li>Frontend</li></a>
-      <a href=''><li>Backend</li></a>
+      <a href='#estructuraFrontend'><li>Estructura del frontend</li></a>
+      <a href='#estructuraBackend'><li>Estructura del backend</li></a>
     </ol>
-  <a href=''><li>Testing del backend y frontend</li></a> 
+  <a href='#test'><li>Testing del backend y frontend</li></a> 
     <ol type='A'>
-      <a href=''><li>Testeando el frontend</li></a>
-      <a href=''><li>Testeando el backend</li></a>
+      <a href='#testFrontend'><li>Testeando el frontend</li></a>
+      <a href='#testBackend'><li>Testeando el backend</li></a>
     </ol>
-  <a href=''><li>Estructura de la base de datos</li></a> 
+  <a href='#db'><li>Estructura de la base de datos</li></a> 
 </ol>
 <br><br>
 
@@ -224,7 +224,7 @@ El código de la aplicación se encuentra dentro de la carpeta "src", al acceder
 </pre>
 <br>
 
-<h2 id='estructuraBackend'>a.Estructura del backend</h2>
+<h2 id='estructuraBackend'>b.Estructura del backend</h2>
 El código de la aplicación tiene la siguiente estructura:
 
 <pre>
@@ -235,6 +235,118 @@ El código de la aplicación tiene la siguiente estructura:
   app.js => archivo principal de la aplicación
   index.js => index del backend
 </pre>
+<br><br>
+<br><br>
 
+<h1 id='test'>3.Testeando la aplicación</h1>
+A continuación veremos los test que se han realizado en la aplicación tanto el backend como el frontend
+<br>
+
+<h2 id='testFrontend'>a.Testeando el frontend</h2>
+Las pruebas en el frontend se realizan usando Cypress, están divididas en pruebas para el login y la creación de usuarios y pruebas para la interacción con los usuarios y los libros.
+Tienen la siguiente estructura:
+<pre>
+ Login and create user
+    Prueba del login y crear usuario
+      -Se muestra el formulario de login
+      -Error al introducir credenciales erroneas
+      -Se muestra el formulario de crear usuario
+      -Se muestra el error al poner dos contraseñas distintas
+      -Se muestra el error al crear usuario sin foto
+      -Se crea un usuario correctamente
+      -Nos logueamos correctamente
+      -Nos deslogueamos correctamente<br><br> 
+ Books and users
+    Creación de libros
+     -Se muestra formulario de crear libropassed
+     -Error al crear libro sin documentopassed
+     -Error al crear libro sin imagenpassed
+     -Error al crear libro sin titulopassed
+     -Se crea un libro correctamentepassed
+     -Error al crear dos libros con el mismo titulo<br> 
+    Interacción con libros
+     -Entramos en un libro cualquiera que no sea nuestropassed
+     -Entramos en un libro nuestropassed
+     -Dar like a un libropassed
+     -Quitar like a un libropassed
+     -Se muestra el formulario de comentariopassed
+     -Se permite comentar en un libropassed
+     -Se permite eliminar mi libro<br> 
+    Interacción con usuarios
+     -Vemos perfil de un usuariopassed
+     -Seguimos a un usuariopassed
+     -Dejamos de seguir a un usuario
+     
+</pre>
+
+### Pruebas del login y creación de usuario
+
+![image](https://user-images.githubusercontent.com/103594582/201546065-7c959b1f-97ea-4922-a515-d1a9926339ce.png)
+
+### Pruebas de libros y usuarios
+
+![image](https://user-images.githubusercontent.com/103594582/201546145-36ecaca5-2b74-473a-8fef-d81c6b7b6d88.png)
+<br><br>
+
+<h2 id='testBackend'>b.Testeando el backend</h2>
+Las pruebas en el backend se realizan usando Jest y Supertest, están divididas en pruebas para el login, los usuarios y los libros.
+Tienen la siguiente estructura:
+<pre>
+ Login test
+      -Login correcto y devuelve json
+      -Login correcto y devuelve token
+      -Login incorrecto y devuelve json y unauthoriced
+      -Login incorrecto y devuelve error<br><br> 
+ User test
+     -Crear usuario correcto y devuelve json
+     -Borrar usuario correcto y devuelve json
+     -Crear usuario correcto y devuelve token sin contraseña
+     -Seguir a un usuario correctamente
+     -Dejar de seguir a un usuario
+     -Borrar usuario correcto y devuelve mensaje
+     -Crear usuario con contraseña incorrecta
+     -Cear usuario con nombre incorrecto
+     -Consultar un usuario en la base de datos correctamenete
+     -Consultar un usuario inexistente en la base de datos<br><br>
+Book test
+     -Crear libro erroneo
+     -Crear libro correcto y devuelve json
+     -Conseguir libros de un usuario
+     -Error al pedir libros de un usuario que no exista
+     -Conseguir un libro concreto
+     -Error al pedir libro que no exista
+     -Eliminar libro
+     -Conseguir ultimos libros
+     -Dar like a un libro
+     -Quitar like a un libro
+     -Busqueda<br><br>
+     
+</pre>
+
+### Pruebas del login
+
+![image](https://user-images.githubusercontent.com/103594582/201546541-15225f1d-e6dc-4e42-8578-d5b450e7097f.png)
+
+### Pruebas de usuarios
+
+![image](https://user-images.githubusercontent.com/103594582/201546559-3fe11699-852b-4302-bf7f-463729613a4d.png)
+
+### Pruebas de libros
+
+![image](https://user-images.githubusercontent.com/103594582/201546602-eb3d7cb3-3bf6-423e-b5bb-8297470d238c.png)
+
+<br><br>
+<br><br>
+
+<h1 id='db'>4.Estructura de la base de datos</h1>
+La base de datos tiene dos colecciones, una para guardar los usuarios y otra para los libros.
+
+La colección de los libros tiene la siguiente estructura:
+
+![librosJson](https://user-images.githubusercontent.com/103594582/201547371-f126d4f4-cf22-43b5-bd6f-99e4f7e5a891.png)
+
+La colección usuarios tiene la siguiente estructura: 
+
+![usuariosJson](https://user-images.githubusercontent.com/103594582/201547523-4281e801-4b47-4df6-ac3b-8e5755564873.png)
 
 
